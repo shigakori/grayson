@@ -1,0 +1,591 @@
+@import url(fonts.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Playfair', 'Roboto';
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.header{
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.nav{
+    position: relative;
+    padding: 25px 0;
+}
+
+.nav__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__burger{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 7px 10px;
+    
+    background: #41a28e;
+    
+    color: #fff;
+    font-size: 20px;
+    
+    border: none;
+    outline: none;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu__link{
+    display: inline-block;
+    
+    font-size: 12px;
+    margin: 12px 20px;
+    
+    text-transform: uppercase;
+}
+
+.dropdown{
+    min-width: 160px;
+    
+    position: absolute;
+    left: 20px;    
+    top: 100%;
+    
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 2px;
+    
+    opacity: 0;
+    transition: .3s;
+    z-index: -1;
+}
+
+.menu__dropdown{
+    position: relative;
+}
+
+.menu__dropdown:hover .dropdown{
+    opacity: 1;
+    z-index: 1;
+}
+
+.menu__icon{
+    transition: .5s;
+}
+
+.menu__dropdown:hover .menu__icon{
+    transform: rotate(90deg);
+}
+
+.dropdown__link{
+    display: block;
+    position: relative;
+    padding: 12px 30px;
+    
+    font-size: 12px;
+}
+
+.dropdown__link::after{
+    content: '';
+    
+    display: block;
+    
+    position: absolute;
+    left: 0;
+    bottom: 0;
+        
+    width: 100%;
+    height: 1px;
+    
+    background: #E5E5E5;
+}
+
+li:last-of-type .dropdown__link::after{
+    display: none;
+}
+
+.nav__form{
+    display: flex;
+}
+
+.nav__input{
+    padding: 5px 12px;
+    margin-right: 4px;
+    
+    font-family: 'Roboto';
+    font-size: 14px;
+    
+    border: 1px solid #41A28E;
+    
+    outline: none;
+    flex-wrap: wrap;
+}
+
+.nav__input::placeholder{
+    color: #4B4848;
+}
+
+.nav__btn{
+    width: 28px;
+    height: 28px;
+    
+    font-size: 14.58px;
+    color: #fff;
+    background: #41A28E;
+    
+    border: none;
+    outline: none;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    
+    min-height: 100vh;
+}
+
+.header__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    
+    background: url(../img/header-bg.jpg) no-repeat center / cover;
+    
+    color: #fff;
+}
+
+.header__title{
+    padding: 16px 61px;
+    margin-bottom: 30px;
+    
+    background: rgba(0, 0, 0, 0.7);
+    
+    font-size: 50px;
+    line-height: 66px;
+    font-weight: 400;
+}
+
+.header__desc{
+    margin-bottom: 50px;
+    
+    font-size: 22px;
+    font-weight: 400;
+    text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.38);
+}
+
+.header__link{
+    padding: 22px 34px;
+    
+    background: #fff;
+    
+    color: #000000;
+    font-size: 12px;
+    
+    transition: .5s;
+}
+
+.header__link:hover{
+    background: #41A28E;
+    color: #fff;
+}
+
+.commerce{
+    padding: 48px;
+    padding-bottom: 72px;
+}
+
+.commerce__content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.commerce__card{
+    position: relative;
+    margin-bottom: 52px;
+    
+    max-width: 255px;
+    width: 100%;
+    height: 170px;
+    
+    border: 1px solid #41A28E;
+    
+    overflow: hidden;
+    transition: .5s;
+}
+
+.commerce__card:hover .commerce__title{
+    bottom: 0;
+}
+
+.commerce__img{
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+}
+
+.commerce__title{
+    width: 100%;
+    padding: 2px;
+    
+    position: absolute;
+    left: 0;
+    bottom: -50%;
+    
+    background: rgba(75, 72, 72, 0.7);;
+    
+    font-family: 'Playfair';
+    color: #fff;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    
+    transition: .3s;
+}
+
+.info{
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    
+    text-align: center;
+}
+
+.info__title{
+    margin-bottom: 18px;
+    
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.info__desc{
+    color: #666;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.project{
+    padding-top: 120px;
+    padding-bottom: 112px;
+    margin-bottom: 50px;
+    
+    background: url(../img/jacket.jpg) no-repeat center / cover;
+    background-attachment: fixed;
+    
+    color: #fff;
+}
+
+.project__desc{
+    margin-bottom: 3px;
+    
+    font-size: 20px;
+}
+
+.project__title{
+    margin-bottom: 22px;
+    
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.project__link{
+    display: inline-block;
+    padding: 23px 42px;
+    
+    background:#fff;
+    
+    font-size: 12px;
+    color: #000000;
+    
+    transition: .5s;
+}
+
+.project__link:hover{
+    background: #41A28E;
+    color: #FFFFFF;
+}
+
+.custom{
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.custom__card{
+    margin-bottom: 30px;
+    
+    max-width: 255px;
+    width: 100%;   
+}
+
+.custom__wrapper{
+    position: relative;
+    
+    height: 340px;
+    
+    overflow: hidden;
+    
+}
+
+.custom__img{
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+}
+
+.custom__service{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 100%;
+    padding: 16px 19px;
+    
+    position: absolute;
+    left: 0;
+    bottom: -50%;
+    
+    color: #fff;
+    font-size: 12px;
+    
+    background: rgba(0, 0, 0, 0.7);
+    
+    transition: .5s;
+}
+
+.custom__card:hover .custom__service{
+    bottom: 0;
+}
+
+.custom__add{
+    display: flex;
+    align-items: center;
+    
+    margin-right: auto;
+}
+
+.custom__add img{
+    margin-right: 15px;
+}
+
+.custom__like{
+    margin-right: 23px;
+}
+
+.custom__info{
+    padding: 10px 18px;
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Roboto';
+    
+    background: #4B484B;
+}
+
+.custom__title{
+    margin-top: 43px;
+    
+    font-size: 22px;
+    font-weight: 400;
+    font-family: 'Playfair';
+}
+
+.custom__price{
+    margin-top: 6px;
+    
+    font-size: 18px;
+    font-family: 'Playfair';
+    font-feature-settings: 'pnum' on, 'lnum' on, 'liga' off;
+}
+
+.custom__sale{
+    margin-right: 15px;
+    
+    color: #666666;
+    text-decoration: line-through;
+}
+
+.custom__content{
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    
+    margin-top: 69px;
+}
+
+.footer{
+    padding-top: 36px;
+    
+    background: #000000;
+    
+    color: #fff;
+    font-family: 'Roboto';
+}
+
+.footer__card{
+    max-width: 255px;
+    width: 100%;
+}
+
+.footer__title{
+    margin-bottom: 38px;
+    
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'Playfair';
+}
+
+.footer__link{
+    display: inline-block;
+    
+    margin: 10px 0;
+    
+    font-size: 14px;
+}
+
+.footer__link_my {
+    display: flex;
+    align-items: center;
+    
+    margin: 7px 0;
+}
+
+.footer__link_my i{
+    margin-right: 10px;
+    
+    font-size: 20px;
+}
+
+.footer__input{
+    max-width: 200px;
+    width: 100%;
+    
+    padding: 14px 10px;
+    
+    font-family: 'Roboto';
+    font-size: 14px;
+    
+    border: none;
+    outline: none;
+}
+
+.footer__input::placeholder{
+    color: #909090;
+}
+
+.footer__btn{
+    padding: 13px 10px;
+    
+    background: #41A28E;
+    
+    font-family: 'Roboto';
+    font-size: 16px;
+    color: #fff;
+    
+    border: none;
+    outline: none;
+}
+
+.footer__form{
+    display: flex;
+    
+    margin-bottom: 20px;
+}
+
+.footer__desc{
+    margin-bottom: 21px;
+    
+    font-size: 14px;
+}
+
+.footer__service{
+    display: flex;
+    
+    font-size: 30px;
+}
+
+.footer__pay{
+    margin-right: 25px
+}
+
+.footer__content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__design{
+    padding: 40px 15px;
+    margin-top: 36px;
+    
+    background: #121212;
+    
+    text-align: center;
+    color: #666666;
+    font-size: 18px;
+}
+
+.footer__name{
+    font-size: 18px;
+    text-shadow: 0px 0px 4px #E52D27;
+}
+
+::-webkit-scrollbar{
+    width: 13px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #6a6a6a;
+    border-radius: 6.5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
